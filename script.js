@@ -1,17 +1,15 @@
-var toDoListInput = document.createElement('input');
-toDoListInput.type = 'text';
-toDoListInput.placeholder = 'Add a task';
+var toDoListInput = document.getElementById('toDoListInput')
 toDoListInput.addEventListener('keypress', function(e) {
   if (e.keyCode === 13) {
     addToDoListItem(this.value);
     this.value = '';
   }
 });
+
 document.body.insertBefore(toDoListInput, toDoList);
-
-
-var toDoList = document.createElement('ol');
+var toDoList = document.getElementById('toDoList');
 document.body.appendChild(toDoList);
+
 var toDoListItems = [];
 var toDoListItemCount = 0;
 var toDoListItem = function(text) {
@@ -20,6 +18,7 @@ var toDoListItem = function(text) {
   this.element = document.createElement('li');
   this.element.innerHTML = this.text;
   this.element.id = this.id;
+  this.element.className = 'listItems'; 
   this.element.addEventListener('click', function() {
     toDoList.removeChild(this);
     toDoListItems.splice(this.id, 1);
