@@ -31,7 +31,7 @@ header {
 
 header h1{ 
 	font-size: 2.5rem;
-	font-weight: 300;
+	font-weight: 500;
 	color: var(--grey);
 	margin-bottom: 1rem;
 }
@@ -55,10 +55,12 @@ input{
 	background: none;
 }
 li {
-font-size: 1.5rem;
-	font-weight: 300;
+  text-align: center;
+font-size: 2rem;
+	font-weight: 500;
 	color: var(--purple);
 	margin-bottom: 1rem;
+  background-color:var(--grey;
 }
 
 #listItems .toDoListItems {
